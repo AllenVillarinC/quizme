@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:quizme/opening_page.dart';
+import 'package:quizme/pages/home_page.dart';
 
 void main() {
   runApp(const QuizMe());
@@ -16,11 +16,16 @@ class _QuizMeState extends State<QuizMe> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
+      // debugShowCheckedModeBanner: false,
       theme: ThemeData(
+          appBarTheme: const AppBarTheme(
+              color: Color(0xff28282B),
+              iconTheme: IconThemeData(color: Color(0xffAF69EE))),
+          drawerTheme: const DrawerThemeData(backgroundColor: Color(0xffE0E2DC)),
+          iconTheme: const IconThemeData(color: Color(0xffAF69EE)),
           scaffoldBackgroundColor: const Color(0xff28282B),
           fontFamily: 'Roboto'),
-      home: const QuizMeOpeningPage(),
+      home: const QuizeMeHomePage(),
     );
   }
 }
